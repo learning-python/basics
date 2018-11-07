@@ -16,6 +16,12 @@ print('multiplied', multiplied)
 print('divided', divided)
 
 # data types
+nothing = None # NoneType
+print('None type', type(None))
+
+yes_or_no = True # bool
+print('yes_or_no type', type(yes_or_no))
+
 greeting = 'hello' # str
 print('greeting type', type(greeting))
 
