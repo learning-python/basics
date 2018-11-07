@@ -37,7 +37,7 @@ print('stuff type', type(stuff))
 cant_change = ('one', 2, { 'three': 3 }) # tuple
 print('cant_change type', type(cant_change))
 
-look_up = { 'a_key': 'a_value', 'another_key': ['another', 'value'] }
+look_up = { 'a_key': 'a_value', 'another_key': ['another', 'value'] } #dict
 print('look_up type', type(look_up))
 
 def say_hi(name): # function
