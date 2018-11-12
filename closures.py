@@ -5,7 +5,7 @@
 # If password is given, returns list of arguments ever
 # given (except passwords).
 
-def saveHistory(password, func):
+def save_history(password, func):
     history = []
     def new_func(arg):
         if arg == password:
@@ -14,15 +14,16 @@ def saveHistory(password, func):
         return func(arg)
     return new_func
 
-def addHello(string):
+
+def add_hello(string):
     return string + ' hello'
 
-magicHello = saveHistory('chips', addHello)
-print(magicHello('Jerry')) # 'Jerry hello'
-print(magicHello('Elaine')) # 'Elaine hello'
-print(magicHello('chips')) # ['Jerry', 'Elaine']
-print(magicHello('George')) # 'George hello'
-print(magicHello('chips')) # ['Jerry', 'Elaine', 'George']
-print(magicHello('chips')) # ['Jerry', 'Elaine', 'George']
-print(magicHello('Kramer')) # 'Kramer hello'
-print(magicHello('chips')) # ['Jerry', 'Elaine', 'George', 'Kramer']
+magic_hello = save_history('chips', add_hello)
+print(magic_hello('Jerry')) # 'Jerry hello'
+print(magic_hello('Elaine')) # 'Elaine hello'
+print(magic_hello('chips')) # ['Jerry', 'Elaine']
+print(magic_hello('George')) # 'George hello'
+print(magic_hello('chips')) # ['Jerry', 'Elaine', 'George']
+print(magic_hello('chips')) # ['Jerry', 'Elaine', 'George']
+print(magic_hello('Kramer')) # 'Kramer hello'
+print(magic_hello('chips')) # ['Jerry', 'Elaine', 'George', 'Kramer']
