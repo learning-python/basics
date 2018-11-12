@@ -6,7 +6,13 @@
 # given (except passwords).
 
 def saveHistory(password, func):
-    # Add code here
+    history = []
+    def new_func(arg):
+        if arg == password:
+            return history
+        history.append(arg)
+        return func(arg)
+    return new_func
 
 def addHello(string):
     return string + ' hello'
